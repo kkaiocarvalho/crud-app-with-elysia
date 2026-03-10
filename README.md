@@ -6,6 +6,8 @@ To install dependencies:
 bun install
 ```
 
+Rename file `.env.copy` to `.env`.
+
 To run:
 
 ```bash
