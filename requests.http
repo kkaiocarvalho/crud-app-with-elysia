@@ -1,0 +1,54 @@
+### BASIC AUTH
+POST http://localhost:3000/auth/basic
+Authorization: Basic YWRtaW46MTIzNDU2
+
+### LIST USER BY ID
+GET http://localhost:3000/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc3Mzc3MDIyNywiaWF0IjoxNzczMTY1NDI3fQ.-0l8IzSZn-he30pwVcOa_RtViGmEvdY4HuhJWVftyLY
+
+### CREATE USER
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "kaio@gmail.com",
+  "password": "teste123"
+}
+
+### DELETE USER BY ID
+DELETE http://localhost:3000/users/3
+
+### UPDATE USER BY ID
+PUT http://localhost:3000/users/2
+Content-Type: application/json
+
+{
+  "email": "kaioscsouza@gmail.com",
+  "password": "teste123"
+}
+
+### GET POST BY USER ID
+GET http://localhost:3000/post/user/2
+
+### GET POST BY ID
+GET http://localhost:3000/post/2
+
+
+### CREATE POST BY AUTHOR ID
+POST http://localhost:3000/post/user/4
+Content-Type: application/json
+
+{
+  "title": "Teste"
+}
+
+### UPDATE POST BY ID
+PUT http://localhost:3000/post/1
+Content-Type: application/json
+
+{
+  "title": "Teste2"
+}
+
+### DELETE POST BY ID
+DELETE http://localhost:3000/post/1
